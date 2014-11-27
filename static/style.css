@@ -1,0 +1,3 @@
+#preview:empty:before {
+  content: attr(placeholder);
+}

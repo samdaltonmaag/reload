@@ -5,8 +5,9 @@
       preview = document.getElementById('preview'),
 
       name = 'VandA',
-      format = 'woff',
-      baseUrl = '/VandA.' + format;
+      format = 'opentype',
+      ext = 'otf',
+      baseUrl = '/' + name + '.' + ext;
 
   function generate (family, url) {
     return "\n" +

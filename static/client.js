@@ -42,6 +42,7 @@
   });
 
   window.onload = function () {
+    preview.spellcheck = false;
     preview.focus();
   };
 })();

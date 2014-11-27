@@ -24,9 +24,14 @@
         style = document.createElement('style');
 
     style.appendChild(document.createTextNode(generate(family, url)));
-
     document.head.appendChild(style);
-    document.head.removeChild(oldStyle);
+
+    /**
+     * delete the old @font-face declaration after 3 seconds
+     */
+    setTimeout(function () {
+      document.head.removeChild(oldStyle);
+    }, 3000);
 
     return family;
   }

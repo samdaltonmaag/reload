@@ -16,7 +16,7 @@
     return process.hrtime()[0];
   }
 
-  fs.watch(filename, function (event, filename) {
+  fs.watchFile(filename, function (event, filename) {
     var currChange = now();
 
     /**
@@ -25,6 +25,7 @@
     if (currChange - prevChange > 3) {
       io.emit('file::change', currChange);
       prevChange = currChange;
+      console.log('file changed');
     }
   });
 

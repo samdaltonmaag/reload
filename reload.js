@@ -9,7 +9,7 @@
       server = http.createServer(app),
       io = require('socket.io')(server),
 
-      filename = __dirname + '/test',
+      filename = __dirname + '/static/VandA.otf',
       prevChange = -Infinity;
 
   function now () {
